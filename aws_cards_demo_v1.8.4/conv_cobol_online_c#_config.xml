@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<divergeek_converter xmlns="https://www.mlogica.com">
+	<properties>
+		<property name="create_date" value="2026-08-15 07:44:12.654"/>
+		<property name="project_name" value="AWS_CARDS_DEMO"/>
+		<property name="rights" value="mLogica"/>
+		<!--
+			One of the following values:
+			jcl
+			proc
+			cobol
+			bms
+		-->
+		<property name="converter" value="cobol"/>
+		<property name="workspace" value="ENV{DG_CONV_WORKSPACE_IN}"/>
+		<property name="delivery_project_root" value="ENV{DG_CONV_WORKSPACE_OUT}\nib-dot-net\Samples"/>
+		<property name="profile" value="cobol_c#_profile"/>
+		<property name="skeleton" value="skeleton_cobol_online.txt"/>
+	</properties>
+	<resources>
+		<resource pattern="CO*" location="sources\cbl" output="${delivery_project_root}" />
+	</resources>
+	<converter_settings>
+		<setting name="target_syntax" value="C_SHARP" />
+		<setting name="target_os" value="windows" />
+		<setting name="target_db" value="MSSQLSRV" />
+		<setting name="reserved_words" value="CURSOR,OVERFLOW" />
+		<setting name="variable_break_char" value="-" />
+		<setting name="copybooks_location" value="${workspace}\sources\cpy;${workspace}\sources\cpy-bms" />
+		<setting name="program_package" value="AwsCardsDemo.Programs.Online" />
+		<setting name="working_storage_sub_package" value="storage" />
+		<setting name="working_storage_variable_name" value="ws" />
+		<setting name="linkage_section_variable_name" value="parms" />
+		<setting name="context" value="Supernaut" />
+		<setting name="comment_tag" value="COB" />
+		<setting name="copybook_package" value="AwsCardsDemo.Copybooks" />
+		<setting name="tab_spaces" value="4" />
+		<setting name="ignore_severe_errors" value="false" />
+	</converter_settings>
+</divergeek_converter>

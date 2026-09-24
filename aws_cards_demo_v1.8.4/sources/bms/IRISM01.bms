@@ -1,0 +1,102 @@
+***********************************************************************
+*
+*     Licensed Materials - Property of Reverse Paradigm, Srl
+*
+*     Copyright (c) 2017 - 2020 by Reverse Paradigm, Srl
+*     All rights reserved.
+*
+***********************************************************************
+*     IRIS-DB v5.0.1a - MFS Converter   Date: 2020.02.26.11.18.32
+***********************************************************************
+*                                                                       
+IRISM01  DFHMSD TYPE=DSECT,STORAGE=AUTO,TIOAPFX=YES,TERM=3270,         X
+               CTRL=(FREEKB),LANG=COBOL,MODE=INOUT                      
+IRISM01  DFHMDI SIZE=(24,80),EXTATT=YES                                 
+         DFHMDF POS=(1,2),LENGTH=76,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='-----------------------------------------------X
+               -----------------------------'                           
+         DFHMDF POS=(2,2),LENGTH=76,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='-                        IRIS-DB - Demo ApplicaX
+               tion                        -'                           
+         DFHMDF POS=(3,2),LENGTH=76,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='-                                              X
+                                           -'                           
+         DFHMDF POS=(4,2),LENGTH=76,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='-                             Reverse Paradigm X
+                                           -'                           
+         DFHMDF POS=(5,2),LENGTH=60,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='-----------------------------------------------X
+               -------------'                                           
+         DFHMDF POS=(5,64),LENGTH=5,ATTRB=ASKIP,COLOR=YELLOW,          X
+               INITIAL='DATE:'                                          
+SYSDATE  DFHMDF POS=(5,70),LENGTH=8,ATTRB=ASKIP,COLOR=YELLOW            
+         DFHMDF POS=(7,3),LENGTH=74,ATTRB=(BRT,ASKIP),                 X
+               INITIAL='COMPANY DATA ..................................X
+               ...........................'                             
+         DFHMDF POS=(9,7),LENGTH=14,ATTRB=ASKIP,                       X
+               INITIAL='NAME         :'                                 
+COMPNAM  DFHMDF POS=(9,22),LENGTH=20,ATTRB=(BRT,FSET,IC)                
+         DFHMDF POS=(10,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='ADDRESS 1    :'                                 
+ADDR1    DFHMDF POS=(10,22),LENGTH=50,ATTRB=(BRT,FSET)                  
+         DFHMDF POS=(11,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='ADDRESS 2    :'                                 
+ADDR2    DFHMDF POS=(11,22),LENGTH=50,ATTRB=(BRT,FSET)                  
+         DFHMDF POS=(12,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='ZIP CODE     :'                                 
+ZIPCODE  DFHMDF POS=(12,22),LENGTH=5,ATTRB=(BRT,FSET,NUM)               
+         DFHMDF POS=(12,29),LENGTH=8,ATTRB=ASKIP,INITIAL='CITY   :'     
+CITY     DFHMDF POS=(12,38),LENGTH=20,ATTRB=(BRT,FSET)                  
+         DFHMDF POS=(12,60),LENGTH=9,ATTRB=ASKIP,INITIAL='COUNTRY :'    
+COUNTRY  DFHMDF POS=(12,70),LENGTH=2,ATTRB=(BRT,FSET)                   
+         DFHMDF POS=(13,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='PHONE PREFIX :'                                 
+PHONEPR  DFHMDF POS=(13,22),LENGTH=4,ATTRB=(BRT,FSET,NUM)               
+         DFHMDF POS=(13,29),LENGTH=8,ATTRB=ASKIP,INITIAL='PHONE  :'     
+PHONE    DFHMDF POS=(13,38),LENGTH=12,ATTRB=(BRT,FSET,NUM)              
+         DFHMDF POS=(14,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='COMPANY CODE :'                                 
+CMPCODE  DFHMDF POS=(14,22),LENGTH=5,ATTRB=(BRT,FSET,PROT)               
+         DFHMDF POS=(14,29),LENGTH=8,ATTRB=ASKIP,INITIAL='REVENUE:'     
+REVENUE  DFHMDF POS=(14,38),LENGTH=20,ATTRB=(BRT,FSET,PROT)                  
+         DFHMDF POS=(14,60),LENGTH=9,ATTRB=ASKIP,INITIAL='IBP     :'    
+IBP      DFHMDF POS=(14,70),LENGTH=6,ATTRB=(BRT,FSET,PROT)                   
+         DFHMDF POS=(16,3),LENGTH=74,ATTRB=(BRT,ASKIP),                X
+               INITIAL='IMS INFO     ..................................X
+               ...........................'                             
+         DFHMDF POS=(18,7),LENGTH=14,ATTRB=ASKIP,                      X
+               INITIAL='USE INDEX    :'                                 
+USEIDX   DFHMDF POS=(18,22),LENGTH=1,ATTRB=(BRT,FSET)                   
+         DFHMDF POS=(18,26),LENGTH=11,ATTRB=ASKIP,INITIAL='LAST CODE :' 
+LASTCOD  DFHMDF POS=(18,38),LENGTH=2,ATTRB=(BRT,ASKIP)                  
+         DFHMDF POS=(20,2),LENGTH=76,ATTRB=(BRT,ASKIP),                X
+               INITIAL='-----------------------------------------------X
+               -----------------------------'                           
+         DFHMDF POS=(21,2),LENGTH=76,ATTRB=(BRT,ASKIP),COLOR=YELLOW,   X
+               INITIAL='F1: EXECUTIVE TEAM   F2: BROWSE BY ROLE    F3 :X
+                EXIT             F5 : SEEK  '                           
+         DFHMDF POS=(22,2),LENGTH=76,ATTRB=(BRT,ASKIP),COLOR=YELLOW,   X
+               INITIAL='F8: NEXT             F9: INSERT            F10:X
+                UPDATE           F11: DELETE'                           
+IMSMSG   DFHMDF POS=(22,80),LENGTH=79,ATTRB=(BRT,ASKIP)                 
+MESSAGE  DFHMDF POS=(24,2),LENGTH=76,ATTRB=(BRT,ASKIP),COLOR=RED        
+*                                                                       
+* SLACK BYTES                                                           
+*                                                                       
+         DFHMDF POS=(5,79),LENGTH=0,ATTRB=(DRK,ASKIP)                   
+         DFHMDF POS=(23,80),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(18,24),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(24,79),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(10,73),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(9,43),LENGTH=0,ATTRB=(DRK,ASKIP)                   
+         DFHMDF POS=(12,73),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(13,27),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(18,41),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(12,59),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(14,77),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(11,73),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(14,28),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(13,51),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMDF POS=(12,28),LENGTH=0,ATTRB=(DRK,ASKIP)                  
+         DFHMSD TYPE=FINAL                                              
+         END                                                            

@@ -1,0 +1,11 @@
+<BR>>>@[OUTPRINT_MAIN_CLASS]
+if ($NibJobScriptRoot) {
+    . $NibJobScriptRoot\Settings.ps1
+} else {
+    . .\Settings.ps1
+}
+<BR>
+$Job=New-Job @[METHOD_OBJECT_LOGICAL_NAME] 
+@[SKELETON_JCL_PWSH_STEPS]
+<BR>
+Complete-Job

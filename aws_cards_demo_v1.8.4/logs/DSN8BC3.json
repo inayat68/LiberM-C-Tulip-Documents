@@ -1,0 +1,31 @@
+{
+  "objectName" : "DSN8BC3",
+  "objectType" : "PROGRAM",
+  "objectLanguage" : "COBOL",
+  "analysis" : {
+    "title" : "COBOL parser",
+    "version" : "3.1.3",
+    "startTime" : "2026-09-24 21:45:36.243",
+    "endTime" : "2026-09-24 21:45:36.277",
+    "fileName" : "D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\sources\\cbl\\DSN8BC3.cbl",
+    "executionStatus" : "OK",
+    "exceptions" : [ ],
+    "messages" : [ ]
+  },
+  "refactoring" : {
+    "title" : "Cobol_Converter",
+    "version" : "1.0.0",
+    "startTime" : "2026-09-24 21:45:36.281",
+    "endTime" : "2026-09-24 21:45:36.325",
+    "fileName" : "D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\sources\\cbl\\DSN8BC3.cbl",
+    "executionStatus" : "OK",
+    "exceptions" : [ ],
+    "messages" : [ {
+      "messageLevel" : "WARNING",
+      "detail" : "Cannot format source 'D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\..\\nib-java-demo-apps\\aws-carddemo-app\\src\\main\\java\\com\\aws\\carddemo\\batch\\program\\DSN8BC3.java', message=[61:22: error: illegal start of expression]",
+      "line" : 61,
+      "container" : "D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\..\\nib-java-demo-apps\\aws-carddemo-app\\src\\main\\java\\com\\aws\\carddemo\\batch\\program\\DSN8BC3.java",
+      "messageError" : "Refactoring warning"
+    } ]
+  }
+}

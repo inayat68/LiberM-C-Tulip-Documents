@@ -1,0 +1,25 @@
+{
+  "objectName" : "CBTRN01C",
+  "objectType" : "PROGRAM",
+  "objectLanguage" : "COBOL",
+  "analysis" : {
+    "title" : "COBOL parser",
+    "version" : "3.1.3",
+    "startTime" : "2026-09-24 21:45:35.425",
+    "endTime" : "2026-09-24 21:45:35.456",
+    "fileName" : "D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\sources\\cbl\\CBTRN01C.cbl",
+    "executionStatus" : "OK",
+    "exceptions" : [ ],
+    "messages" : [ ]
+  },
+  "refactoring" : {
+    "title" : "Cobol_Converter",
+    "version" : "1.0.0",
+    "startTime" : "2026-09-24 21:45:35.457",
+    "endTime" : "2026-09-24 21:45:35.508",
+    "fileName" : "D:\\Data\\Inayat Rehman\\mCloud\\LiberM\\C-Tulip\\aws_cards_demo_v1.8.4\\sources\\cbl\\CBTRN01C.cbl",
+    "executionStatus" : "OK",
+    "exceptions" : [ ],
+    "messages" : [ ]
+  }
+}
